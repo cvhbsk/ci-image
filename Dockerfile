@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install curl wget jq make git -y
+RUN apt-get update && apt-get install curl wget jq make git tree -y
 ADD https://github.com/geofffranks/spruce/releases/download/v1.6.0/spruce-linux-amd64 /usr/local/bin/spruce
 ADD https://cli.run.pivotal.io/stable?release=linux64-binary&source=github /tmp/cf-cli.tgz
 RUN tar -xvzf /tmp/cf-cli.tgz -C /usr/local/bin/
